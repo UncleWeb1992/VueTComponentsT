@@ -1,0 +1,57 @@
+{
+  "name": "@dedywka_gaspacho/components",
+  "version": "0.0.1",
+  "private": false,
+  "type": "module",
+  "main": "./dist/t-components.umd.js",
+  "module": "./dist/t-components.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/t-components.es.js",
+      "require": "./dist/t-components.umd.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "pub": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UncleWeb1992/VueTComponentsT.git"
+  },
+  "dependencies": {
+    "vue": "^3.2.0"
+  },
+  "author": "Ivanov Tahir <inyan.revda@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "path": "^0.12.7",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-static-copy": "^3.0.0",
+    "vite-svg-loader": "^5.1.0",
+    "vue-tsc": "^2.0.29"
+  },
+  "description": "test",
+  "keywords": [
+    "table",
+    "best table"
+  ],
+  "bugs": {
+    "url": "https://github.com/UncleWeb1992/components/issues"
+  },
+  "homepage": "https://github.com/UncleWeb1992/components#readme"
+}
