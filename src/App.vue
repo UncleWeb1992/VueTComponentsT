@@ -21,7 +21,7 @@ const columns: ITableColumn[] = [
     label: '',
     align: 'center',
     sortable: true,
-    style: { width: '40px' },
+    style: { width: '50px' },
   },
   {
     field: 'name',
@@ -42,14 +42,14 @@ const columns: ITableColumn[] = [
     label: 'User Name',
     align: 'left',
     sortable: true,
-    responsive: true,
+    responsive: false,
   },
   {
     field: 'UserAge',
     label: 'Age',
     align: 'center',
     sortable: true,
-    responsive: true,
+    responsive: false,
     hide: true,
     style: { width: '60px' },
   },
@@ -58,8 +58,14 @@ const columns: ITableColumn[] = [
     label: 'Street Name',
     align: 'left',
     sortable: true,
-    responsive: true,
+    responsive: false,
     format: (value) => value.name,
+  },
+  {
+    field: 'action',
+    label: 'Action',
+    responsive:false,
+    style:{width: "80px"}
   },
 ]
 
@@ -72,6 +78,7 @@ const pagination = {
 
 <template>
   <div style="height: calc(100vh - 60px); width: 80vw; margin: 30px auto">
+    {{selected.length}}
     <Table
       title="Таблица"
       row-key="id"
@@ -86,7 +93,7 @@ const pagination = {
         {{ props.row.street.name }}
       </template>
       <template #column-action="{ props }">
-        {{ props.row.action }}
+        <button>{{ props.row.action }}</button>
       </template>
     </Table>
   </div>
