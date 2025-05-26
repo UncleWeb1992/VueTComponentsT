@@ -1,6 +1,6 @@
 {
   "name": "@dedywka_gaspacho/table",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "type": "module",
   "main": "./dist/t-components.umd.js",
