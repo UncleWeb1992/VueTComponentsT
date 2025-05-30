@@ -56,21 +56,23 @@ const getRowValue = (column: ITableColumn, row: T) => {
 </script>
 
 <style>
-.tr {
-  border-bottom: 1px solid #2c313c;
+@layer TTable {
+  .tr {
+    border-bottom: 1px solid #2c313c;
 
-  & td {
-    padding: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    & td {
+      padding: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
-    &:not(:last-child) {
-      border-right: 1px solid #2c313c;
-    }
+      &:not(:last-child) {
+        border-right: 1px solid #2c313c;
+      }
 
-    &.checked {
-      text-align: center;
+      &.checked {
+        text-align: center;
+      }
     }
   }
 }

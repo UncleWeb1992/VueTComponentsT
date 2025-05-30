@@ -226,62 +226,72 @@ onUnmounted(unMount)
 </script>
 
 <style scoped>
-.tr {
-  border-bottom: 2px solid #2c313c;
+@layer TTable {
+  .tr {
+    border-bottom: 2px solid #2c313c;
 
-  & th {
-    position: relative;
-    padding: 5px 0;
-    min-width: 40px;
+    & th {
+      position: relative;
+      padding: 5px 0;
+      height: 30px;
+      min-width: 40px;
+      min-height: 30px;
 
-    &:not(:last-child) {
-      border-right: 1px solid #000;
-    }
+      &:not(:last-child) {
+        border-right: 1px solid #000;
+      }
 
-    & .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 10px;
+      & .wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-left: 10px;
 
-      &.empty {
-        justify-content: center;
-        padding-left: 0;
+        &.empty {
+          justify-content: center;
+          padding-left: 0;
+        }
+      }
+
+      & img {
+        width: 20px;
+        height: 20px;
+
+        user-select: none;
+        cursor: pointer;
+      }
+
+      & span {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        user-select: none;
+
+        &.drag:hover {
+          cursor: grab;
+        }
+      }
+      &.checked {
+        width: 42px;
       }
     }
+  }
 
-    & img {
-      width: 20px;
-      height: 20px;
+  .border {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    user-select: none;
+    cursor: col-resize;
 
-      user-select: none;
-      cursor: pointer;
-    }
-
-    & span {
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      user-select: none;
-
-      &.drag:hover {
-        cursor: grab;
-      }
-    }
-    &.checked {
-      width: 42px;
+    &:hover {
+      background-color: orange !important;
     }
   }
 }
 
-.border {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  user-select: none;
-  cursor: col-resize;
-}
 </style>

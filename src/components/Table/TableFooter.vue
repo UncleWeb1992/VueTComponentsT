@@ -26,44 +26,47 @@ const mathTotalParts = () =>
 </script>
 
 <style scoped>
-.footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  font-weight: 600;
-  padding: 10px;
-  border: 1px solid #000;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  & li {
-    width: 30px;
-    height: 20px;
-    border: 1px solid #000;
-
+@layer TTable {
+  .footer {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    user-select: none;
+    justify-content: space-between;
 
-    cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 
-    &:not(:last-child) {
-      margin-right: 2px;
-    }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    &.active {
-      background-color: #000;
-      color: #fff;
+    & li {
+      width: 30px;
+      height: 20px;
+      border: 1px solid #000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+
+      &.active {
+        background-color: #000;
+        color: #fff;
+      }
     }
   }
 }
+
 </style>

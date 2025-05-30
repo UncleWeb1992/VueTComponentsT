@@ -36,23 +36,26 @@ const handleChange = (val: string) => {
 }
 </script>
 <style scoped>
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #000;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
-  & span {
-    font-weight: 600;
-    font-size: 18px;
-  }
-
-  & .header-inner {
+@layer TTable {
+  .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    & span {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    & .header-inner {
+      display: flex;
+      align-items: center;
+    }
   }
 }
+
 </style>

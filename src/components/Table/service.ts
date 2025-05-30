@@ -55,8 +55,8 @@ export class TableService {
       return Object.keys(row).some((key) => {
         const col = columns.find((col) => col.field === key)
         if (col?.format)
-          return col
-            .format(row[key as keyof T], row)
+          return String(col
+            .format(row[key as keyof T], row))
             .toLowerCase()
             .includes(search.toLowerCase())
         return String(row[key as keyof T])
@@ -71,7 +71,7 @@ export class TableService {
     columns: ITableColumn[],
     width?: string,
   ) {
-    const updatedColumns = columns.map((col) => {
+    return columns.map((col) => {
       if (col.label === content) {
         return {
           ...col,
@@ -81,10 +81,7 @@ export class TableService {
           },
         }
       }
-
       return col
     })
-
-    return updatedColumns
   }
 }

@@ -140,29 +140,28 @@ const loadColumns = () => {
     columns.value = props.columns.filter((col) => !col.hide)
   } else {
     const parsedColumns = JSON.parse(columnsInLS) as string[]
-    const allColumns = parsedColumns
+    columns.value = parsedColumns
       .map((name) => props.columns.find((col) => col.field === name))
       .filter(Boolean) as ITableColumn[]
-    columns.value = allColumns
   }
 }
 
 onBeforeMount(loadColumns)
 </script>
 <style scoped>
-.table {
-  width: 100%;
-  height: fit-content;
-  border-collapse: collapse;
-  overflow: hidden;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+@layer TTable {
+  .table {
+    width: 100%;
+    height: fit-content;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    table-layout: fixed;
 
-  overflow: hidden;
-  table-layout: fixed;
-
-  &.borderTop {
-    border-top: 2px solid #000;
+    &.borderTop {
+      border-top: 2px solid #000;
+    }
   }
 }
 </style>
