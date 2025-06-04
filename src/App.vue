@@ -78,7 +78,6 @@ const pagination = {
 
 <template>
   <div style="height: calc(100vh - 60px); width: 80vw; margin: 30px auto">
-    {{selected.length}}
     <Table
       title="Таблица"
       row-key="id"
