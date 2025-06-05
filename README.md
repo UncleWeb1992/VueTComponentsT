@@ -8,7 +8,7 @@ Vue 3 компонент таблицы с возможностью ресайз
 Install my-project with npm
 
 ```bash
-  npm install @gaspacho/table
+  npm install @dedywka_gaspacho/table
 ```
 
 ## Usage/Examples
@@ -20,8 +20,8 @@ Install my-project with npm
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Table, type ITableColumn } from '@gaspacho/table'   +
-import '@gaspacho/table/style.css'                           +
+import { Table, type ITableColumn } from '@dedywka_gaspacho/table'   +
+import '@dedywka_gaspacho/table/style.css'                           +
 
 const selected = ref<typeof rows>([])
 
@@ -104,17 +104,17 @@ const columns: ITableColumn[] = [
 ```
 ## Props
 
-| Name          |Required| Type                    | Description
-| ------------- |--------|-------------------------|--------------------|
-| rows          |   yes  |  object[]               |  Rows table       
-| columns       |   yes  |  ITableColumn[]         |  Columns table       
-| rowKey        |   yes  |  unique keyof row       |  settings pagination       
-| pagination    |   no   |  IPagination            |  left header title table     
-| title         |   no   |  string                 |  type selection rows 
-| selectionMode |   no   |  'multiple' / 'single'  |  hide or show 
-| hideFooter    |   no   |  boolean                |  hide or show 
-| hideHeader    |   no   |  boolean                |  hide or show 
-| dragColumn    |   no   |  boolean                |  on drag header mode 
+| Name          |Required| Type                  | Description
+| ------------- |--------|-----------------------|--------------------|
+| rows          |   yes  | object[]              |  Rows table       
+| columns       |   yes  | ITableColumn[]        |  Columns table       
+| rowKey        |   yes  | string                |  unique keyof row       
+| pagination    |   no   | IPagination           |  settings pagination     
+| title         |   no   | string                |  left header title table
+| selectionMode |   no   | 'multiple' / 'single' |  hide or show 
+| hideFooter    |   no   | boolean               |  hide or show 
+| hideHeader    |   no   | boolean               |  hide or show 
+| dragColumn    |   no   | boolean               |  on drag header mode 
 
 
 ## Authors
